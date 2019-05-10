@@ -1,0 +1,4 @@
+dn: cn=Greeks,ou=Groups,dc=infra,dc=caasp,dc=local
+changetype: modify
+add: uniqueMember
+uniqueMember: uid=delta,ou=People,dc=infra,dc=caasp,dc=local

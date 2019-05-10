@@ -1,0 +1,24 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: load-generator
+spec:
+  replicas: 1
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: load-generator
+    spec:
+      containers:
+      - args:
+        - /bin/sh
+        image: busybox
+        name: load-generator
+        stdin: true
+        tty: true
+

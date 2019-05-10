@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: tomcat-deployment
+spec:
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: tomcat
+    spec:
+      containers:
+      - name: nginx
+        image: smt.example.com:5000/jsevans/tomcat-opensuse:latest
+        ports:
+        - containerPort: 8080

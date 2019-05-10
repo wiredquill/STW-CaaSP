@@ -1,0 +1,39 @@
+#cloud-config
+ 
+debug: True
+disable_root: False
+ssh_deletekeys: False
+ssh_pwauth: True
+ssh_authorized_keys:
+  - ssh-rsa __management_key_goes_here__
+ 
+chpasswd:
+  list: |
+    root:linux
+  expire: False
+
+zypp_repos:
+  "Update Repo":
+    baseurl: http://192.168.110.2/repo/SUSE/Updates/SUSE-CAASP/ALL/x86_64/update/
+
+hostname: admin
+fqdn: admin.example.com
+
+manage_resolv_conf: true
+resolv_conf:
+  nameservers: [ '192.168.110.2' ]
+  searchdomains: 
+    - example.com
+  domain: example.com
+  options:
+    rotate: true
+    timeout: 1
+
+ntp:
+  servers:
+    - 192.168.110.2
+runcmd:
+  - /usr/bin/systemctl enable --now ntpd
+ 
+suse_caasp:
+  role: admin

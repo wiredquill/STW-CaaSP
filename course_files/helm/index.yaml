@@ -1,0 +1,150 @@
+apiVersion: v1
+entries:
+  dokuwiki:
+  - appVersion: 0.20180422.201805030840
+    created: 2018-06-29T04:06:50.513390067-06:00
+    description: DokuWiki is a standards-compliant, simple to use wiki optimized for
+      creating documentation. It is targeted at developer teams, workgroups, and small
+      companies. All data is stored in plain text files, so no database is required.
+    digest: 207a95b7680e9c41a4e056023ea72ff39a4ae04935ba5c80eb6df5441d22ee11
+    engine: gotpl
+    home: http://www.dokuwiki.org/
+    icon: https://bitnami.com/assets/stacks/dokuwiki/img/dokuwiki-stack-110x117.png
+    keywords:
+    - dokuwiki
+    - wiki
+    - php
+    maintainers:
+    - email: containers@bitnami.com
+      name: Bitnami
+    name: dokuwiki
+    sources:
+    - https://github.com/bitnami/bitnami-docker-dokuwiki
+    urls:
+    - http://127.0.0.1:8879/dokuwiki-1.0.3.tgz
+    version: 1.0.3
+  grafana:
+  - appVersion: 5.1.3
+    created: 2018-06-29T04:06:50.514987549-06:00
+    description: The leading tool for querying and visualizing time series and metrics.
+    digest: 87979ca9ca2a7563a437cc24b1dc13d48665081ce9fbd44504aea5df26536215
+    engine: gotpl
+    home: https://grafana.net
+    icon: https://raw.githubusercontent.com/grafana/grafana/master/public/img/logo_transparent_400x.png
+    maintainers:
+    - email: zanhsieh@gmail.com
+      name: zanhsieh
+    - email: rluckie@cisco.com
+      name: rtluckie
+    name: grafana
+    sources:
+    - https://github.com/grafana/grafana
+    urls:
+    - http://127.0.0.1:8879/grafana-1.12.0.tgz
+    version: 1.12.0
+  heapster:
+  - apiVersion: v1
+    appVersion: 1.3.0
+    created: 2018-06-29T04:06:50.519464071-06:00
+    description: Heapster enables Container Cluster Monitoring and Performance Analysis.
+    digest: 559a1cdb2a9be0132662e27e2d01e055115c37a771e9de9da70bfe0ca178b110
+    engine: gotpl
+    home: https://github.com/kubernetes/heapster
+    keywords:
+    - metrics
+    - cadvisor
+    - monitoring
+    maintainers:
+    - email: jose.g.aguirre@intel.com
+      name: Jose Aguirre
+    name: heapster
+    sources:
+    - https://github.com/kubernetes/heapster
+    - https://github.com/kubernetes/contrib/tree/master/addon-resizer
+    urls:
+    - http://127.0.0.1:8879/heapster-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v1
+    created: 2018-06-29T04:06:50.519065644-06:00
+    description: Heapster enables Container Cluster Monitoring and Performance Analysis.
+    digest: d14bf024edb7b46647f6d9d961136ce8982cc9152e85460830cead18a66b9b7c
+    engine: gotpl
+    keywords:
+    - metrics
+    - cadvisor
+    - monitoring
+    maintainers:
+    - email: jose.g.aguirre@intel.com
+      name: Jose Aguirre
+    name: heapster
+    sources:
+    - https://github.com/kubernetes/heapster
+    - https://github.com/kubernetes/contrib/tree/master/addon-resizer
+    urls:
+    - http://127.0.0.1:8879/heapster-0.2.7.tgz
+    version: 0.2.7
+  influxdb:
+  - appVersion: "1.4"
+    created: 2018-06-29T04:06:50.520053358-06:00
+    description: Scalable datastore for metrics, events, and real-time analytics.
+    digest: 06439495b6ec328dd4bf549c876455247e221f14efa16406efd709cac32c79da
+    engine: gotpl
+    home: https://www.influxdata.com/time-series-platform/influxdb/
+    keywords:
+    - influxdb
+    - database
+    - timeseries
+    maintainers:
+    - email: jack@influxdb.com
+      name: jackzampolin
+    name: influxdb
+    sources:
+    - https://github.com/influxdata/influxdb
+    urls:
+    - http://127.0.0.1:8879/influxdb-0.9.3.tgz
+    version: 0.9.3
+  kubernetes-dashboard:
+  - appVersion: 1.8.3
+    created: 2018-06-29T04:06:50.520536983-06:00
+    description: General-purpose web UI for Kubernetes clusters
+    digest: f12c2c38aac84e1f5c161a7335afbfaedffc0b3b65bdfc9541afc1d3925c56bb
+    home: https://github.com/kubernetes/dashboard
+    icon: https://raw.githubusercontent.com/kubernetes/kubernetes/master/logo/logo.svg
+    keywords:
+    - kubernetes
+    - dashboard
+    maintainers:
+    - email: Kevin.Fox@pnnl.gov
+      name: kfox1111
+    name: kubernetes-dashboard
+    sources:
+    - https://github.com/kubernetes/dashboard
+    urls:
+    - http://127.0.0.1:8879/kubernetes-dashboard-0.7.1.tgz
+    version: 0.7.1
+  wordpress:
+  - appVersion: 4.9.6
+    created: 2018-06-29T04:06:50.521825968-06:00
+    description: Web publishing platform for building blogs and websites.
+    digest: dc199bac86b6d8e36b542516c6c2b3345d1be755dd34d6761046ed979ba9b0bc
+    engine: gotpl
+    home: http://www.wordpress.com/
+    icon: https://bitnami.com/assets/stacks/wordpress/img/wordpress-stack-220x234.png
+    keywords:
+    - wordpress
+    - cms
+    - blog
+    - http
+    - web
+    - application
+    - php
+    maintainers:
+    - email: containers@bitnami.com
+      name: bitnami-bot
+    name: wordpress
+    sources:
+    - https://github.com/bitnami/bitnami-docker-wordpress
+    urls:
+    - http://127.0.0.1:8879/wordpress-2.0.0.tgz
+    version: 2.0.0
+generated: 2018-06-29T04:06:50.512516908-06:00

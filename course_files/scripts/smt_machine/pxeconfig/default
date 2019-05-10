@@ -1,0 +1,11 @@
+default vesamenu.c32
+prompt 0
+timeout 50
+
+menu title PXE Install Server
+
+label harddisk
+  menu label Local Hard Disk
+  localboot 0
+
+

@@ -1,0 +1,15 @@
+default vesamenu.c32
+#default harddisk
+timeout 100
+
+menu title PXE Install Server
+
+label harddisk
+  menu label Local Hard Disk
+  localboot 0
+
+label install-52:54:00:ca:14:01
+  menu label install-52:54:00:ca:14:01 (worker14)
+  kernel caasp/linux
+  append load_ramdisk=1 initrd=caasp/initrd netsetup=dhcp hostname=worker14 autoyast=http://192.168.110.99/autoyast install=http://192.168.110.2/repo/SUSE/Install/SUSE-CAASP/x86_64
+

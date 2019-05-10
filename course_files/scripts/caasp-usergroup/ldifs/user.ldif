@@ -1,0 +1,10 @@
+dn: uid=FIRSTNAME,ou=People,dc=infra,dc=caasp,dc=local
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+uid: FIRSTNAME
+userPassword: 
+givenname: FIRSTNAME
+cn: FIRSTNAME LASTNAME
+sn: LASTNAME
+mail: FIRSTNAME@example.com

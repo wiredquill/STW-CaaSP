@@ -1,0 +1,10 @@
+dn: uid=alpha,ou=People,dc=infra,dc=caasp,dc=local
+objectClass: person
+objectClass: inetOrgPerson
+objectClass: top
+uid: alpha
+userPassword: {SSHA}aV1Bukc/Ncl4sOIA2wHgIIyh6HGoQo5B
+givenname: alpha
+cn: alpha user
+sn: user
+mail: alpha@example.com

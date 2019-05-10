@@ -1,0 +1,19 @@
+#cloud-config
+ 
+debug: True
+disable_root: False
+ssh_deletekeys: False
+ssh_pwauth: True
+ssh_authorized_keys:
+  - ssh-rsa __admin_key_goes_here__
+ 
+zypp_repos:
+  "Update Repo":
+    baseurl: http://192.168.110.2/repo/SUSE/Updates/SUSE-CAASP/ALL/x86_64/update/
+
+hostname: worker13
+
+suse_caasp:
+  role: cluster
+  admin_node: 192.168.110.99
+
