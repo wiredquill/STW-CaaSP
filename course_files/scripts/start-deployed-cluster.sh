@@ -4,11 +4,8 @@ VM_LIST="
 CAAS101-smt:30
 CAAS101-admin:120
 CAAS101-master01:20
-CAAS101-master02:10
-CAAS101-master03:30
 CAAS101-worker10:10
 CAAS101-worker11:10
-CAAS101-worker12:10
 "
 
 start_vms() {
