@@ -23,11 +23,11 @@ spec:
             - name: NFS_SERVER
               value: 192.168.110.2
             - name: NFS_PATH
-              value: /export/volumes
+              value: /export/heimdall
       serviceAccount: nfs-client-provisioner
       serviceAccountName: nfs-client-provisioner
       volumes:
         - name: nfs-client-root
           nfs:
             server: 192.168.110.2
-            path: /export/volumes
+            path: /export/heimdall
