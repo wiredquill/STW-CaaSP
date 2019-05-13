@@ -16,18 +16,18 @@ spec:
           image: smt.example.com:5000/quay.io/external_storage/nfs-client-provisioner:latest
           volumeMounts:
             - name: nfs-client-root
-              mountPath: /config
+              mountPath: /persistentvolumes
           env:
             - name: PROVISIONER_NAME
               value: smt.example.com
             - name: NFS_SERVER
               value: 192.168.110.2
             - name: NFS_PATH
-              value: /export/heimdall
+              value: /export/volumes
       serviceAccount: nfs-client-provisioner
       serviceAccountName: nfs-client-provisioner
       volumes:
         - name: nfs-client-root
           nfs:
             server: 192.168.110.2
-            path: /export/heimdall
+            path: /export/volumes
