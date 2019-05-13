@@ -30,4 +30,4 @@ spec:
         - name: nfs-client-root
           nfs:
             server: 192.168.110.2
-            path: /export/heimdal
+            path: /export/heimdall
