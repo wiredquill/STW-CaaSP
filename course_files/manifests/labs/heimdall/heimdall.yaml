@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: heimdall-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: heimdall
+    spec:
+      containers:
+      - name: haimdall
+        image: smt.example.com:5000/linuxserver/heimdall
+        ports:
+        - containerPort: 80
+        - containerPort: 443
