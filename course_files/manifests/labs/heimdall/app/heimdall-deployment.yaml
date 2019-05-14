@@ -1,16 +1,22 @@
+apiVersion: extensions/v1beta1
 kind: Deployment
-apiVersion: v1
 metadata:
-  name: test-pod
+  name: heimdall-deployment
 spec:
-  containers:
-  - name: test-pod
-    image: linuxserver/heimdall
-    volumeMounts:
-      - name: nfs-pvc
-        mountPath: "/config"
-  restartPolicy: "Never"
-  volumes:
-    - name: nfs-pvc
-      persistentVolumeClaim:
-        claimName: test-claim
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: heimdall
+    spec:
+      containers:
+        - name: heimdall-pod
+          image: linuxserver/heimdall
+          volumeMounts:
+            - name: nfs-pvc
+              mountPath: "/config"
+      restartPolicy: "Never"
+      volumes:
+        - name: nfs-pvc
+          persistentVolumeClaim:
+            claimName: test-claim
