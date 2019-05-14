@@ -1,4 +1,4 @@
-kind: Pod
+kind: Deployment
 apiVersion: v1
 metadata:
   name: test-pod
