@@ -2,7 +2,7 @@
 
 VM_LIST="
 CAAS101-worker11:5
-CAAS101-worker10:15
+CAAS101-worker10:30
 CAAS101-master01:30
 CAAS101-admin:10
 CAAS101-smt:1
