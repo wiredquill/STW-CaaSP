@@ -1,13 +1,13 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: heimdall-deployment
+  name: heimdall-shared-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: heimdall
+        app: heimdall-shared
     spec:
       containers:
         - name: heimdall-pod
@@ -18,4 +18,4 @@ spec:
       volumes:
         - name: heimdall-pvc-shared
           persistentVolumeClaim:
-            claimName: heimdall-shared
+            claimName: heimdall-shared-claim
