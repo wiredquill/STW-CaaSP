@@ -13,7 +13,7 @@ spec:
         - name: heimdall-pod
           image: linuxserver/heimdall
           volumeMounts:
-            - name: nfs-pvc
+            - name: heimdall-pvc-shared
               mountPath: "/config"
       volumes:
         - name: heimdall-pvc-shared
