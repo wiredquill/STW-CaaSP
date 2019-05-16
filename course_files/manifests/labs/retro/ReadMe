@@ -1,0 +1,26 @@
+Create a folder.
+Place a copy of your game in the folder. I am using the shareware version of Commander Keen here.
+(The dockerfile)
+
+Replace the COPY keen /dos/keen with your game (ie. COPY wolf3d /dos/wolf3d). 1. You can also change the default password, or override it with a -e parameter when you run the image.
+Now, with Docker, build the image. I’m assuming you already have Docker installed and are familiar with it to some extent. CD to the directory in a console and run the command…
+ docker build -t mydosbox .
+Run the image.
+ docker run -p 6080:6080 dosbox
+Open a browser and point it to http://localhost:6080/vnc.html
+You should see a prompt for the password. Type it in, and you should be able to connect to your container with DosBox running. You can now use the command prompt to start your games.
+Once your image is built, you can push it to your image repository with docker push, but you’ll need to tag it appropriately.
+
+To Launch in Kubernetes
+Kubernetes is another part of the equation when it comes to container apps. Containers on Kubernetes are deployed into pods, which are then usually a part of a part of a deployment, which will have one or more pods associated with it. Deployments can also be used for creating scalable sets of pods for high availability too on a Kubernetes cluster. If you’re not familiar with Kubernetes, check out this webinar below where I go in depth on the matter.
+
+Deployments and services can be defined declaratively with a YAML file. Below is a Kuberenetes YAML file that defines a deployment and a service for my retro gaming container.
+
+The deployment is simple – it points to a single container image called blaize/keen and then tells Kubernetes what ports to expose for the container. The service defines how the deployment will be exposed on a network. In this case, it’s using a TCP load balancer, where it is exposing port 80 and mapping that to the port exposed by the deployment. The service uses selectors on the label app to match the service with the deployment.
+
+
+To connect use this, first create a file called keen.yaml file, configure your instance kubectl to work with your instance of Kubernetes, then run deploy the sample.
+
+kubectl create -f keen.yaml
+
+When this is deployed to Kubernetes, Kubernetes will configure the external network to open on port 80 to listen to incoming requests. When used on Azure Kubernetes Services, AKS will create and map a public IP address (htttp://[your ip address]/vnc.html) for the service. Once connected, you can point your browser to the IP address of your cluster and have fun playing your retro games!
