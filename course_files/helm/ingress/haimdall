@@ -1,0 +1,18 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: example-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /caasp
+          backend:
+            serviceName: heimdall-shared
+            servicePort: 30000
+        - path: /heimdall
+          backend:
+            serviceName: heimdal
+            servicePort: 31000
