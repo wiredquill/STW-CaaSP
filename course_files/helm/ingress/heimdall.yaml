@@ -10,9 +10,9 @@ spec:
       paths:
         - path: /caasp
           backend:
-            serviceName: heimdall-shared
+            serviceName: heimdall-shared-service
             servicePort: 80
         - path: /heimdall
           backend:
-            serviceName: heimdal
+            serviceName: heimdal-service
             servicePort: 80
