@@ -11,8 +11,8 @@ spec:
         - path: /caasp
           backend:
             serviceName: heimdall-shared
-            servicePort: 30000
+            servicePort: 80
         - path: /heimdall
           backend:
             serviceName: heimdal
-            servicePort: 31000
+            servicePort: 80
