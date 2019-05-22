@@ -14,5 +14,5 @@ spec:
             servicePort: 80
         - path: /heimdall
           backend:
-            serviceName: heimdal-service
+            serviceName: heimdall-service
             servicePort: 80
