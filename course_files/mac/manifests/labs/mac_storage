@@ -1,0 +1,38 @@
+# For use on docker for mac
+kind: StorageClass
+apiVersion: storage.k8s.io/v1beta1
+metadata:
+  name: localstorage
+provisioner: docker.io/hostpath
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+    app: mysql
+  name: mysql-pvc
+spec:
+  storageClassName: localstorage
+  accessModes:
+    - ReadWriteOnce
+    - ReadOnlyMany
+  resources:
+    requests:
+      storage: 20Gi
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: mysql-pv
+  labels:
+    type: local
+spec:
+  storageClassName: localstorage
+  capacity:
+    storage: 20Gi
+  accessModes:
+    - ReadWriteOnce
+    - ReadOnlyMany
+  hostPath:
+    # this is the path on laptop? 
+    path: "/usr/local/var/mysql_data"
