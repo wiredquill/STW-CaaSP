@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: mysql-pv
+  name: Macbook-pv
   labels:
     type: local
 spec:
@@ -34,5 +34,5 @@ spec:
     - ReadWriteOnce
     - ReadOnlyMany
   hostPath:
-    # this is the path on laptop? 
-    path: "/usr/local/var/mysql_data"
+    # this is the path on laptop 
+    path: "/Users/erin/Kubernetes/data"
