@@ -13,9 +13,9 @@ spec:
         - name: heimdall-pod
           image: linuxserver/heimdall
           volumeMounts:
-            - name: heimdall-claim
+            - name: nfs-pvc
               mountPath: "/config"
       volumes:
-        - name: heimdall-claim
+        - name: nfs-pvc
           persistentVolumeClaim:
             claimName: heimdall-claim
