@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: heimdall-shared-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: heimdall-shared
+    spec:
+      containers:
+        - name: heimdall-pod
+          image: linuxserver/heimdall
+          ports:
+           - containerPort: 80
