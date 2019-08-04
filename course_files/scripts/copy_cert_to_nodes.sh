@@ -2,7 +2,7 @@
 USERNAME=root
 HOSTS="master01 worker10 worker10"
 for HOSTNAME in ${HOSTS} ; do
-    scp course_files/certs/domain.crt root@${HOSTNAME}://etc/pki/trust/anchors/ 
+    scp ~/STW-CaaSP/course_files/certs/domain.crt root@${HOSTNAME}://etc/pki/trust/anchors/ 
 done
 
 
